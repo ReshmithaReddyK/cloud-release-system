@@ -1,0 +1,33 @@
+version: 0.2
+
+phases:
+
+  install:
+    runtime-versions:
+      nodejs: 20
+
+  pre_build:
+    commands:
+      - echo "Installing application dependencies..."
+      - cd sample-app
+      - npm install
+
+  build:
+    commands:
+      - echo "Running automated tests..."
+      - npm test
+      - echo "Build completed successfully."
+
+  post_build:
+    commands:
+      - echo "Creating release package..."
+      - cd ..
+      - mkdir release
+      - cp sample-app/index.html release/
+      - cp sample-app/package.json release/
+      - echo "Release package created."
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: release

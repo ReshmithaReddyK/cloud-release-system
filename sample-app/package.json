@@ -1,0 +1,8 @@
+{
+  "name": "cloud-release-demo",
+  "version": "1.0.0",
+  "description": "Sample application for automated release system",
+  "scripts": {
+    "test": "node test.js"
+  }
+}
