@@ -66,10 +66,7 @@ if (loginForm) {
 
             return;
         }
-
-        document.getElementById("loginMessage").textContent =
-            "Login system will be connected to Amazon Cognito.";
-
+window.location.href = "dashboard.html";
     });
 
 }

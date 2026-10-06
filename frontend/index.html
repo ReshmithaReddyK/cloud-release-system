@@ -1,74 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Cloud Release Management System</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Cloud Release System</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header>
-    <h1>Cloud Release Management System</h1>
-    <p>Automated Software Release and Version Tracking</p>
-</header>
+    <div class="login-container">
 
-<div class="container">
+        <div class="login-box">
 
-     <div class="actions">
+            <h1>Cloud Release System</h1>
 
-        <button>+ New Version</button>
-        <button>+ New Release</button>
-        <button>View History</button>
+            <p class="subtitle">
+                Automated Software Release and Version Tracking
+            </p>
+
+            <form id="loginForm">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+        </div>
 
     </div>
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>Projects</h3>
-            <p id="projects">2</p>
-        </div>
-
-        <div class="card">
-            <h3>Versions</h3>
-            <p id="versions">8</p>
-        </div>
-
-        <div class="card">
-            <h3>Successful Releases</h3>
-            <p id="successful">6</p>
-        </div>
-
-        <div class="card">
-            <h3>Failed Releases</h3>
-            <p id="failed">2</p>
-        </div>
-
-    </div>
-
-    <h2>Release History</h2>
-
-    <table>
-
-        <thead>
-            <tr>
-                <th>Release ID</th>
-                <th>Version</th>
-                <th>Build</th>
-                <th>Test</th>
-                <th>Deployment</th>
-            </tr>
-        </thead>
-
-        <tbody id="releaseTable">
-
-        </tbody>
-
-    </table>
-
-</div>
-
-<script src="app.js"></script>
+    <script src="app.js"></script>
 
 </body>
+
 </html>
