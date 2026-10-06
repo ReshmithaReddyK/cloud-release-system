@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <title>Cloud Release Management System</title>
@@ -14,60 +15,124 @@
 
 <div class="container">
 
-     <div class="actions">
+```
+<div class="actions">
 
-        <button>+ New Version</button>
-        <button>+ New Release</button>
-        <button>View History</button>
+    <button id="newVersionBtn">+ New Version</button>
 
-    </div>
+    <button id="newReleaseBtn">+ New Release</button>
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>Projects</h3>
-            <p id="projects">2</p>
-        </div>
-
-        <div class="card">
-            <h3>Versions</h3>
-            <p id="versions">8</p>
-        </div>
-
-        <div class="card">
-            <h3>Successful Releases</h3>
-            <p id="successful">6</p>
-        </div>
-
-        <div class="card">
-            <h3>Failed Releases</h3>
-            <p id="failed">2</p>
-        </div>
-
-    </div>
-
-    <h2>Release History</h2>
-
-    <table>
-
-        <thead>
-            <tr>
-                <th>Release ID</th>
-                <th>Version</th>
-                <th>Build</th>
-                <th>Test</th>
-                <th>Deployment</th>
-            </tr>
-        </thead>
-
-        <tbody id="releaseTable">
-
-        </tbody>
-
-    </table>
+    <button id="historyBtn">View History</button>
 
 </div>
 
+<div class="cards">
+
+    <div class="card">
+        <h3>Projects</h3>
+        <p id="projects">2</p>
+    </div>
+
+    <div class="card">
+        <h3>Versions</h3>
+        <p id="versions">8</p>
+    </div>
+
+    <div class="card">
+        <h3>Successful Releases</h3>
+        <p id="successful">6</p>
+    </div>
+
+    <div class="card">
+        <h3>Failed Releases</h3>
+        <p id="failed">2</p>
+    </div>
+
+</div>
+
+<h2>Release History</h2>
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Release ID</th>
+            <th>Version</th>
+            <th>Build</th>
+            <th>Test</th>
+            <th>Deployment</th>
+        </tr>
+    </thead>
+
+    <tbody id="releaseTable">
+    </tbody>
+
+</table>
+```
+
+</div>
+<!-- New Version Popup -->
+
+<div id="versionModal" class="modal">
+
+    <div class="modal-box">
+
+        <h2>New Version</h2>
+
+        <label for="versionInput">Version Number</label>
+
+        <input
+            type="text"
+            id="versionInput"
+            placeholder="Example: 1.3.0"
+        >
+
+        <div class="modal-actions">
+
+            <button id="saveVersionBtn">Create Version</button>
+
+            <button id="cancelVersionBtn">Cancel</button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- New Release Popup -->
+
+<div id="releaseModal" class="modal">
+
+    <div class="modal-box">
+
+        <h2>New Release</h2>
+
+        <label for="releaseIdInput">Release ID</label>
+
+        <input
+            type="text"
+            id="releaseIdInput"
+            placeholder="Example: REL-004"
+        >
+
+        <label for="releaseVersionInput">Version</label>
+
+        <input
+            type="text"
+            id="releaseVersionInput"
+            placeholder="Example: 1.3.0"
+        >
+
+        <div class="modal-actions">
+
+            <button id="saveReleaseBtn">Create Release</button>
+
+            <button id="cancelReleaseBtn">Cancel</button>
+
+        </div>
+
+    </div>
+
+</div>
 <script src="app.js"></script>
 
 </body>
